@@ -10,7 +10,8 @@ import java.util.List;
  * @author 郑超
  * @date 2021-05-23 17:42
  */
-@FeignClient(value = "MICROSERVICECLOUD-DEPT")
+//@FeignClient(value = "MICROSERVICECLOUD-DEPT")
+@FeignClient(value = "MICROSERVICECLOUD-DEPT", fallbackFactory = DeptClientServiceFallbackFactory.class)
 @RequestMapping("/dept")
 public interface DeptClientService {
 
